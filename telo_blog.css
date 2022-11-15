@@ -1,0 +1,114 @@
+#telo {
+    padding: 15px;
+    padding-top: 30px;
+    text-align: center;
+    min-width: 300px;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.nadpis a {
+    text-decoration: none;
+    color: black;
+}
+
+.text {
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.ramecek {
+    padding: 30px;
+    padding-top: 0;
+}
+
+.cisteni,
+.vycisteno,
+.css,
+.online {
+    max-width: 400px;
+    width: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.sql,
+.power2,
+.power3,
+.javascript,
+.import,
+.powerb {
+    max-width: 600px;
+    width: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.sql2 {
+    max-width: 350px;
+    width: 100%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.cisteni,
+.sql,
+.power2,
+.power3,
+.javascript,
+.vycisteno,
+.sql2,
+.css,
+.online,
+.import,
+.powerb {
+    padding-bottom: 15px;
+
+    padding-right: 30px;
+
+}
+
+.vycisteno,
+.css,
+.sql2,
+.sql {
+    padding-top: 30px;
+}
+
+.dalsi {
+    padding-top: 30px;
+}
+
+
+
+
+
+.text,
+.odstavec1,
+.odstavec2,
+.odstavec3,
+.odstavec4,
+.odstavec5,
+.odstavec6 {
+    color: #696969;
+    padding-top: 15px;
+
+}
+
+
+.obchod,
+.zprava,
+.powerbi,
+.dashboard,
+.prezentace,
+.dalsi {
+    padding-top: 30px;
+}

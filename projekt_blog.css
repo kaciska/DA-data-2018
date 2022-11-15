@@ -1,0 +1,120 @@
+#projekt {
+    padding: 15px;
+    min-width: 300px;
+
+}
+
+h2,
+.oprojektu,
+.projekt,
+.zakaznici,
+.vykon,
+.planovani {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0;
+}
+
+
+.tablet {
+    min-width: 300px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+
+}
+
+.ruce,
+.zvonek,
+.tym {
+
+
+    border-radius: 50%;
+    border: 1px solid #E8E8E8;
+    width: 30%;
+    padding: 10px;
+    min-width: 70px;
+    max-width: 70px;
+
+
+}
+
+.oprojektu,
+.zakaznici,
+.vykon,
+.planovani {
+    padding-bottom: 15px;
+}
+
+.oprojektu,
+.zakaznici,
+.vykon,
+.planovani {
+    padding-top: 15px;
+}
+
+.oprojektu,
+.odst1,
+.odst2,
+.odst3 {
+    color: #696969;
+
+}
+
+@media (min-width: 500px) {
+
+    .tablet {
+        max-width: 600px;
+    }
+
+    .projekt {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .radek {
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+    }
+
+    .planovani {
+        text-align: center;
+    }
+
+    .odst3 {
+        width: 300px;
+    }
+
+
+}
+
+@media (min-width: 1000px) {
+    
+
+    .krabicka {
+        width: 960px;
+
+        background-color: white;
+
+        margin: -50px auto 0 auto;
+
+        box-shadow: 0 0 8px 1px rgba(140, 138, 140, 1);
+        position: relative;
+        z-index: 1;
+        
+
+    }
+.radek {
+    padding: 30px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+}
+h2 {
+    padding-bottom: 30px;
+}
+}
+

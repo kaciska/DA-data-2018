@@ -1,0 +1,50 @@
+.paticka {
+    padding: 20px;
+    box-shadow: -2px 5px 15px -3px rgba(140, 138, 140, 0.4) inset;
+    background: white;
+    text-align: center;
+    color: black;
+    min-width: 300px;
+    color: #696969;
+    
+}
+
+.dekujem {
+    padding-bottom: 30px;
+    padding-top: 20px
+}
+p.copyright::before {
+
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: black;
+    color: black;
+    opacity: 0.8;
+    position: absolute;
+    left: -75px;
+    margin: -30px 50% 0 50%;
+    
+
+
+}
+
+.copyright {
+padding: 30px;
+padding-bottom: 10px;
+margin: 0;
+}
+
+.logo {
+    width: 50%;
+    min-width: 50px;
+    max-width: 150px;
+}
+
+@media (min-width: 500px) {
+    .dekujem {
+        width: 500px;
+        margin: auto;
+    }
+}

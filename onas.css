@@ -1,0 +1,110 @@
+#onas {
+    min-height: 500px;
+    min-width: 300px;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+    color: white;
+
+
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/uvodni_foto.jpg");
+
+    background-size: cover;
+    min-width: 300px;
+    background-repeat: no-repeat;
+    background-position: 50% center;
+    color: white;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.my {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.katka,
+.alca {
+
+    border-radius: 50%;
+    width: 50%;
+    padding: 10px;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+#sipkaVlevo,
+#sipkaVpravo {
+    border: 1px solid white;
+    border-radius: 50%;
+    min-width: 10px;
+    max-width: 30px;
+    max-height: 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 250px;
+}
+
+
+
+#medailonek2 {
+    display: none;
+}
+
+
+
+
+
+.email,
+.facebook,
+.linkedin {
+
+
+    width: 30%;
+    padding: 10px;
+    min-width: 50px;
+    max-width: 70px;
+}
+
+.popisOsoby {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#onas {
+
+    position: relative;
+}
+
+@media (min-width: 500px) {
+    #medailonek,
+    #medailonek2 {
+        margin: 0 auto 0 auto;
+        width: 400px;
+        padding-top: 30px;
+    }
+}
+    @media (min-width: 1000px) {
+
+        #onas {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        
+
+        #medailonek2 {
+            width: 400px;
+            display: block;
+            padding-top: 30px;
+        }
+
+        #sipkaVlevo,
+        #sipkaVpravo {
+            display: none;
+        }
+    }

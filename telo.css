@@ -1,0 +1,115 @@
+#telo {
+
+    padding-top: 30px;
+    text-align: center;
+    min-width: 300px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.nadpis a {
+    text-decoration: none;
+    color: black;
+}
+
+.text {
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+
+.obrazek {
+  margin: 0 auto;
+}
+.tablet {
+    max-width: 300px;
+    width: 100%;
+    min-width: 300px;
+    padding: 15px;
+}
+
+
+
+.domecek,
+.dopis,
+.desky,
+.kalendar,
+.dum,
+.tym {
+
+    border-radius: 50%;
+    border: 1px solid #E8E8E8;
+    width: 30%;
+    padding: 10px;
+    min-width: 70px;
+    max-width: 70px;
+}
+
+.obchod,
+.zprava,
+.powerbi,
+.dashboard,
+.prezentace,
+.dalsi {
+    padding: 30px;
+
+}
+
+.obchod,
+.zprava,
+.powerbi,
+.dashboard,
+.prezentace,
+.dalsi {
+    padding-bottom: 15px;
+}
+
+.zprava,
+.powerbi,
+.dashboard,
+.prezentace,
+.dalsi {
+    padding-top: 15px;
+}
+
+
+
+.text,
+.odstavec1,
+.odstavec2,
+.odstavec3,
+.odstavec4,
+.odstavec5,
+.odstavec6 {
+    color: #696969;
+}
+
+@media (min-width: 500px) {
+    .ramecek {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .tablet {
+        max-width: 600px;
+            }
+    .radek {
+        display: flex;
+
+    }
+
+    .obchod,
+    .zprava,
+    .dashboard,
+    .prezentace,
+    .dalsi,
+    .powerbi {
+        padding-top: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 50%;
+        height: auto;
+    }
+
+}

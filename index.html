@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130940268-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130940268-1');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="hlavicka.css">
+    <link rel="stylesheet" type="text/css" href="uvod.css">
+    <link rel="stylesheet" type="text/css" href="telo.css">
+    <link rel="stylesheet" type="text/css" href="onas.css">
+    <link rel="stylesheet" type="text/css" href="paticka.css">
+    <link rel="stylesheet" type="text/css" href="projekt.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <title>Analýza prodeje IT produktů</title>
+</head>
+
+<body>
+    <div id="kontejner">
+        <div class="test">
+            <div class="horni_lista">
+
+                <div class="hamburger" onclick="displayMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+
+                <h1 class="nadpis">
+                    <a href="index.html">Analýza prodeje IT produktů</a>
+                </h1>
+
+            </div>
+        </div>
+
+
+        <div id="uvod" onmouseover="cancelMenu()">
+            <div class="perex">
+                <p class="info">9. běh Digitální akademie v Brně</p>
+            </div>
+
+        </div>
+        <ul id="menu">
+            <li><a href="index.html">Úvod</a></li>
+            <li><a href="blog.html">Projekt</a></li>
+            <li><a href="#onas">O nás</a></li>
+            <li><a href="http://katerinablatna.cz/internal/index.html">Dashboard</a></li>
+        </ul>
+        <div class="krabicka">
+            <div id="telo">
+
+                <h2 class="uvod_nadpis">O čem to celé bylo?</h2>
+
+                <p class="text">Náš projekt se zabývá analýzou dat z prodeje IT produktů za období 2012 až 2018. Do
+                    této
+                    chvíle jsou data uložena v excelových tabulkách, které slouží pro další zpracování – vytváření
+                    dalších
+                    excelových tabulek :). Obchodní zástupci a vedení firmy s daty pracují na denní bázi, především za
+                    účelem
+                    kontroly prodejů, smluvních zákazníků, ale i pro plánování kroků a směřování společnosti do dalších
+                    období.</p>
+                <p class="text">Časová náročnost zpracování dat a získání žádoucích výsledků je v současné chvíli něco
+                    přes 5
+                    dní měsíčně. To je v přepočtu 480 hodin ročně. Současně vznikají chyby ve zpracování, které mají
+                    dopad
+                    na finanční bonusy obchodních zástupců. Četnost těchto chyb se pohybuje okolo 20 %, tedy každý pátý
+                    report obsahuje chybu.</p>
+                <p class="text">Hlavním cílem našeho projektu byla úspora času na ½ dne měsíčně, tedy na 48 hodin ročně
+                    a současně
+                    snížení rizika chyb ve zpracování dat na 5 %, tedy aby chybu obsahoval maximálně každý dvacátý
+                    report.
+                    Výstupem projektu je dashboard, který usnadní a zefektivní zpracování dat obchodníkům i vedení
+                    firmy.</p>
+
+
+                <div class="ramecek">
+                    <div class="radek">
+                        <div class="obchod">
+                            <img class="domecek" src="icons/obchod.png" alt="obchod">
+                            <h3>Čištění dat</h3>
+                            <p class="odstavec1">Po seznámení a analýze dat jsme přistoupily k anonymizaci a čištění dat v
+                                Excelu. </p>
+                        </div>
+
+                        <div class="zprava">
+                            <img class="dopis" src="icons/zprava.png" alt="zprava">
+                            <h3>SQL databáze</h3>
+                            <p class="odstavec2">Vzhledem k množství dat v několika Excel tabulkách jsme se rozhodly k
+                                nahrání dat do databáze. </p>
+                        </div>
+                    </div>
+                    <div class="radek">
+                        <div class="powerbi">
+                            <img class="desky" src="icons/desky.png" alt="desky">
+                            <h3>PowerBI</h3>
+                            <p class="odstavec3">Důležitou částí projektu byla práce v PowerBI. Vytvořily jsme
+                                jednotlivé dashboardy s vizualizacemi dle konkrétních potřeb od roku 2012 do
+                                současnosti.
+
+                            </p>
+                            </p>
+                        </div>
+
+
+                        <div class="dashboard">
+                            <img class="kalendar" src="icons/kalendar.png" alt="kalendář">
+                            <h3>Dashboard Online</h3>
+                            <p class="odstavec4">
+                                Usnadnění přístupu k datům pro obchodníky na cestách jsme docílily online dashboardem
+                                dostupným z webové stránky.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="radek">
+                        <div class="prezentace">
+                            <img class="dum" src="icons/dum.png" alt="dům">
+                            <h3>Webová prezentace</h3>
+                            <p class="odstavec5">
+                                Responzivní webová stránka slouží zároveň pro prezentaci našeho projektu. Podstránka s
+                                dashboardem je zaheslovaná a každý obchodník bude mít svůj přístup.
+                            </p>
+                        </div>
+
+                        <div class="dalsi">
+                            <img class="tym" src="icons/tym.png" alt="domeček">
+                            <h3>Další vývoj projektu</h3>
+                            <p class="odstavec6">
+                                V další fázi představíme detailně naše řešení společnosti a budeme usilovat o zahrnutí
+                                do firemní domény.
+                            </p>
+                        </div>
+                    </div>
+
+                 <div class="obrazek"> 
+                    <img class="tablet" src="images/powerbi3.png">
+                </div>    
+
+                    
+                </div>
+                
+
+
+                </div>
+
+
+                <h2 class="my">Kdo stojí za projektem?</h2>
+                <div id="onas">
+                    <div id="medailonek">
+                        <div class="obal">
+                            <img class="katka" src="images/katka.jpg" alt="Kateřina Blatná">
+                            <img id="sipkaVpravo" onclick="displayAlca()" src="icons/sipkaVpravo.jpg" alt="šipka vpravo">
+                        </div>
+                        <h3>Kateřina Blatná</h3>
+                        <p class="popisOsoby">Markeťačka s velkým nadšením do informačních technologií, která si
+                            oblíbila
+                            kouzla s
+                            webovým kódem. Digitální akademie mi
+                            otevřela další zajímavou a neprobádanou oblast. Jsem vděčná za tuto příležitost.</p>
+                        <div class="ikony">
+                            <a href="mailto:katerina.blatna(zav)email.cz" target="_top">
+                                <img class="email" src="icons/mail.png" alt="E-mail">
+                            </a>
+                            <a href="https://www.facebook.com/katerina.blatna.9" target="_blank">
+                                <img class="facebook" src="icons/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.linkedin.com/in/katerinablatna/" target="_blank">
+                                <img class="linkedin" src="icons/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <div id="medailonek2">
+                        <div class="obal">
+                            <img class="alca" src="images/alca.jpg" alt="Alena Krejčířová">
+                            <img id="sipkaVlevo" onclick="displayKatka()" src="icons/sipkaVlevo.jpg" alt="šipka vlevo">
+                        </div>
+                        <h3>Alena Krejčířová</h3>
+                        <p class="popisOsoby">S velkým nadšením využívám data pro rozhodování, i když ne vždy to v
+                            oblasti
+                            HR je zcela jednoduché. Z Digitální Akademie mi učarovala oblast vizualizace dat, kterou se
+                            chystám dál probádat.</p>
+                        <div class="ikony">
+                            <a href="mailto:krejcirovaalena(zav)gmail.com" target="_top">
+                                <img class="email" src="icons/mail.png" alt="E-mail">
+                            </a>
+                            <a href="https://www.facebook.com/alenkakrejcirova" target="_blank">
+                                <img class="facebook" src="icons/facebook.png" alt="Facebook">
+                            </a>
+                            <a href="https://www.linkedin.com/in/alenakrejcirova/" target="_blank">
+                                <img class="linkedin" src="icons/linkedin.png" alt="LinkedIn">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="paticka">
+                    <a href="https://www.czechitas.cz" target="_blank"><img class="logo" src="images/logo.png" alt="Logo Czechitas"></a>
+
+                    <p class="dekujem">Děkujeme našim mentorům Romanu Barošovi a Honzovi Richterovi i všem ostatním
+                        mentorům, koučům, zástupcům firem i celému týmu Czechitas a hlavně
+                        všem
+                        ostatním kolegyním z
+                        Digitální akademie.
+                        Všichni jsme dohromady tvořili skvělý tým!
+                    </p>
+
+                    <p class="copyright">© Copyright Kateřina Blatná 2018</p>
+
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+#uvod {
+    background-image: url("images/hlavniObrazek4.jpg");
+    background-size: cover;
+    min-width: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    height: 500px;
+    position: relative;
+    
+}
+
+
+
+.perex {
+    color: white;
+    
+
+}
+
+.info {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 18px;
+}

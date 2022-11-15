@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130940268-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-130940268-1');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="hlavicka.css">
+    <link rel="stylesheet" type="text/css" href="uvod.css">
+    <link rel="stylesheet" type="text/css" href="telo_blog.css">
+    <link rel="stylesheet" type="text/css" href="onas.css">
+    <link rel="stylesheet" type="text/css" href="paticka.css">
+    <link rel="stylesheet" type="text/css" href="projekt_blog.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <title>Projekt Digitální akademie</title>
+</head>
+
+<body>
+    <div id="kontejner">
+        <div class="test">
+            <div class="horni_lista">
+
+                <div class="hamburger" onclick="displayMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+
+                <h1 class="nadpis">
+                    <a href="index.html">Analýza prodeje IT produktů</a>
+                </h1>
+
+            </div>
+        </div>
+
+
+        <div id="uvod" onmouseover="cancelMenu()">
+            <div class="perex">
+                <p class="info">9. běh Digitální akademie v Brně</p>
+            </div>
+
+        </div>
+        <ul id="menu">
+            <li><a href="index.html">Úvod</a></li>
+            <li><a href="blog.html">Projekt</a></li>
+            <li><a href="#onas">O nás</a></li>
+            <li><a href="http://katerinablatna.cz/internal/index.html">Dashboard</a></li>
+        </ul>
+        <div class="krabicka">
+            <div id="telo">
+
+                <h2 class="uvod_nadpis">Jak jsme postupovaly</h2>
+
+                <p class="text">Náš projekt se zabývá analýzou dat z prodeje IT produktů za období 2012 až 2018. Do
+                    této
+                    chvíle jsou data uložena v excelových tabulkách, které slouží pro další zpracování – vytváření
+                    dalších
+                    excelových tabulek :). Obchodní zástupci a vedení firmy s daty pracují na denní bázi, především za
+                    účelem
+                    kontroly prodejů, smluvních zákazníků, ale i pro plánování kroků a směřování společnosti do dalších
+                    období.</p>
+                <p class="text">Časová náročnost zpracování dat a získání žádoucích výsledků je v současné chvíli něco
+                    přes 5
+                    dní měsíčně. To je v přepočtu 480 hodin ročně. Současně vznikají chyby ve zpracování, které mají
+                    dopad
+                    na finanční bonusy obchodních zástupců. Četnost těchto chyb se pohybuje okolo 20 %, tedy každý pátý
+                    report obsahuje chybu.</p>
+                <p class="text">Hlavním cílem našeho projektu byla úspora času na ½ dne měsíčně, tedy na 48 hodin ročně
+                    a současně
+                    snížení rizika chyb ve zpracování dat na 5 %, tedy aby chybu obsahoval maximálně každý dvacátý
+                    report.
+                    Výstupem projektu je dashboard, který usnadní a zefektivní zpracování dat obchodníkům i vedení
+                    firmy.</p>
+                </p>
+
+                <div class="ramecek">
+
+                    <div class="obchod">
+                        <h3>Čištění dat</h3>
+                        <p class="odstavec1">Prodeje produktů jsme získaly v 7 excelových tabulkách, za každý rok
+                            jednu. Každá tabulka vzniká v interním systému z více zdrojů. Ve velké části případů jsou
+                            data zadávána manuálně. Objevila se celá řada překlepů, logických chyb, chybějících údajů a
+                            nesmyslů. Každá tabulka měla rozsah 150-200 tisíc řádků. K dispozici jsme měly také tabulku
+                            KPI prodejů smluvních zákazníků i obchodních zástupců. Kromě oprav a kontroly logické
+                            správnosti dat jsme data anonymizovaly pomocí funkce vlookup v Excelu, sjednotily adresy
+                            pomocí PSČ České pošty (opět vlookup) a rozdělily do csv souborů.</p>
+                        <figure>
+                            <img class="cisteni" src="images/cisteni.png">
+                            <figcaption>Ukázka části zdrojových dat s počtem řádků</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="vycisteno" src="images/vycisteno.png">
+                            <figcaption>Anonymizovaná data za použití vlookup</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="zprava">
+
+                        <h3>SQL databáze</h3>
+                        <p class="odstavec2">Využily jsme Microsoft SQL Server Management Studio, ve kterém jsme
+                            založily databázi a postupně naimportovaly veškeré tabulky ve formátu csv. S využitím
+                            CREATE TABLE a INSERT INTO jsme vytvořily tabulky nové (podle předem nakresleného datového
+                            modelu) a vložily do nich agregovaná data. U všech sloupců jsme upravily datový typ.
+                            Napsaly jsme „insert script“, který nám usnadní práci při zpracování dalších tabulek, které
+                            budou v praxi přibývat jednou měsíčně. Využili jsme především příkazů SELECT, SELECT
+                            DISTINCT, UNION, UNION ALL.
+                            Celou databázi jsme v závěru přesunuly na Azure, abychom zajistily její funkčnost 24/7.
+                        </p>
+                        <figure>
+                            <img class="sql2" src="images/sql2.png">
+                            <figcaption>Vytvoření nové tabulky</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="sql" src="images/sql.png">
+                            <figcaption>Spojení všech tabulek Sales pomocí UNION ALL</figcaption>
+                        </figure>
+
+
+
+                    </div>
+
+
+                    <div class="powerbi">
+
+                        <h3>PowerBI</h3>
+                        <p class="odstavec3">Další fáze projektu spočívala v importu dat z databáze do PowerBI. Po
+                            importu
+                            jsme
+                            upravily vazby v datovém modelu, vytvořily tabulku Date a také tabulku Measures, do
+                            které
+                            jsme
+                            vytvářely všechny výpočty. Pracovaly jsme s jednoduchými příkazy v jazyce DAX, většinou jsme
+                            si
+                            ale
+                            vystačily s předdefinovanými Measures, úpravy jsme využily pouze u některých time
+                            intelligence
+                            ukazatelů (YoY, MoM, QoQ). <figure>
+                                <img class="import" src="images/import.png">
+                                <figcaption>Propojení tabulek v PowerBI</figcaption>
+                            </figure>
+                            <p class="odstavec3">Dle informací od obchodních zástupců a vedení společnosti jsme
+                                vytvořily dashboardy s ukazateli, které se ve firmě reálně sledují. Popisky grafů máme
+                                v českém jazyce, proměnné v anglickém, aby výstup odpovídal aktuálním zvyklostem
+                                prezentace dat ve společnosti. Výstupem je tedy několik dashboardů:
+                            </p>
+                            <p class="odstavec3">Obecný dashboard obsahuje analýzu vratek (před rokem 2016 vratky možné
+                                nebyly), obrat produktů ve vztahu k jejich ceně, nejprodávanější kategorie produktů,
+                                nejprodávanější produkty a celkový meziroční obrat v procentech, včetně predikce na dva
+                                roky dopředu.</p>
+                            <figure>
+                                <img class="powerb" src="images/powerbi.png">
+                                <figcaption>Úkazka obecného dashboardu</figcaption>
+                            </figure>
+
+                        </p>
+
+
+                        <p class="odstavec3">Dashboard pro management – náhled pro vedení společnosti, kde zobrazujeme,
+                            jak si
+                            vedou obchodníci (co do obratu, počtu bodů i plnění KPIs) a jak si vedou reselleři.
+                            Vedení společnosti zajímá především srovnání s loňskem, plnění plánu a srovnání
+                            jednotlivých obchodníků.</p>
+                        <figure>
+                            <img class="power2" src="images/powerbi2.png">
+                            <figcaption>Úkazka dashboardu pro vedení</figcaption>
+                        </figure>
+                        <p class="odstavec3">Dashboard pro každého obchodníka – uzpůsobený tak, aby si mohl obchodní
+                            zástupce vyfiltrovat rok, případně i měsíce, které ho zajímají a zobrazit si svoje prodejní
+                            výsledky a také výsledky resellerů:</p>
+                        <figure>
+                            <img class="power3" src="images/powerbi3.png">
+                            <figcaption>Úkazka dashboardu pro jednotlivé obchodníky</figcaption>
+                        </figure>
+
+                    </div>
+
+
+                    <div class="dashboard">
+                        <h3>Dashboard Online</h3>
+                        <p class="odstavec4">
+                            Vzhledem k neustálé pracovní vytíženosti a služebním cestám obchodníků jsme se snažily
+                            vymyslet co možná nejsnadnější a nejrychlejší přístup k dashboardům odkudkoliv. Rozhodly
+                            jsme se proto vytvořit webovou stránku, kde se po přihlášení obchodníci k datům ihned
+                            dostanou téměř odkudkoliv. PowerBI dashboard je do stránky vložen pomocí HTML kódu a
+                            zabezpečení proběhlo na serveru, na kterém běží doména (Forpsi – basic auth tedy bylo možné
+                            nastavit přímo v administraci).
+                        </p>
+                        <figure>
+                            <img class="online" src="images/online.png">
+                            <figcaption>Vygenerovaný kód pro vložení do HTML</figcaption>
+                        </figure>
+                    </div>
+
+
+                    <div class="prezentace">
+
+                        <h3>Webová prezentace</h3>
+                        <p class="odstavec5">
+                            Responzivní webová stránka slouží zároveň pro prezentaci našeho projektu. Vytvořily
+                            jsme ji
+                            za
+                            pomocí HTML 5, CSS 3 a Javascriptu v naprosto skvělém editoru VS Code. K vytvoření
+                            stránky
+                            nám
+                            dopomohly znalosti získané na kurzech <a href="https://www.czechitas.cz/">Czechitas</a>
+                            Web
+                            od
+                            A do
+                            Z a Javascript vedené Luďkem Rolečkem, všemocný Google a velké nadšení :).
+                        </p>
+                        <figure>
+                            <img class="javascript" src="images/javascript.png">
+                            <figcaption>Javascript pro skrývání hamburger menu a fungování tlačítek</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="css" src="images/css.png">
+                            <figcaption>Ukázka CSS kódu</figcaption>
+                        </figure>
+                    </div>
+
+
+
+
+
+                    <div class="dalsi">
+                        <h3>Další vývoj</h3>
+                        <p class="odstavec6">
+                            Naše práce na projektu je teprve na začátku. Čeká nás představení finálního řešení
+                            společnosti a následná implementace řešení. V prvním kroku přesuneme doménu do firemní
+                            sítě, s tím bude souviset úprava řešení zabezpečení – rády bychom zabezpečení přenesly do
+                            vrstvy aplikace, ne do vrstvy serveru, jak to máme aktuálně.
+                            Dalším krokem a oblastí rozvoje je automatizace čistění dat.
+
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div id="projekt">
+                <h2>Hlavní cíle a přínosy projektu</h2>
+                <p class="oprojektu">Data v dashboardu představují prodeje smluvních zákazníků dle jednotlivých
+                    obchodníků.
+                    Obchodník má vždy na starosti resellery z určitého regionu. U těchto resellerů pravidelně
+                    kontroluje
+                    prodeje HW a spotřebního materiálu, plnění závazků, počty bodů, tenderů apod. Vzhledem k tomu, že
+                    jsou
+                    obchodníci většinu času na cestách,
+                    potřebují mít přehled u sebe kdykoliv a kdekoliv. Také vedení firmy potřebuje mít přehled o všech
+                    svých
+                    obchodnících a jejich zákaznících, ale zároveň se zajímá také o prodejnost jednotlivých kategorií.
+                    Veškeré informace následně slouží pro plánování akcí, slev, marketingových aktivit apod. na další
+                    měsíce a roky.
+                </p>
+
+                <div class="radek">
+                    <div class="zakaznici">
+                        <img class="ruce" src="icons/ruce.png" alt="ruce">
+                        <h3>Zákazníci</h3>
+                        <p class="odst1">Pro každého obchodního zástupce je klíčový přehled o zákaznících. V PowerBI
+                            jsme
+                            každému obchodníkovi vytvořily tabulku jen s jeho zákazníky. Tabulku si lze vyfiltrovat
+                            podle
+                            let a
+                            měsíců a ihned tak zjistí, jak si stojí. Každý produkt je jinak výdělečný. Je tedy důležité
+                            kontrolovat i výkonnost jednotlivých produktů rozdělených do kategorií.</p>
+                    </div>
+
+                    <div class="vykon">
+                        <img class="zvonek" src="icons/zvonek.png" alt="zvonek">
+                        <h3>Srovnání a plánování</h3>
+                        <p class="odst2">
+                            Práce každého obchodníka stojí i na srovnávání měsíčních, kvartálních a ročních výsledků. V
+                            PowerBI jsme vytvořily filtr pomocí kterého si obchodník jednoduše nakliká požadované
+                            období. V současné
+                            době si obchodník musí otevřít tabulku (nebo někdy i více tabulek) v Excelu pro jednolivé
+                            roky a tam filtrovat. Naše
+                            řešení
+                            tedy
+                            ušetří hodiny času.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <h2 class="my">Kdo stojí za projektem?</h2>
+            <div id="onas">
+                <div id="medailonek">
+                    <div class="obal">
+                        <img class="katka" src="images/katka.jpg" alt="Kateřina Blatná">
+                        <img id="sipkaVpravo" onclick="displayAlca()" src="icons/sipkaVpravo.jpg" alt="šipka vpravo">
+                    </div>
+                    <h3>Kateřina Blatná</h3>
+                    <p class="popisOsoby">Markeťačka s velkým nadšením do informačních technologií, která si
+                        oblíbila
+                        kouzla s
+                        webovým kódem. Digitální akademie mi
+                        otevřela další zajímavou a neprobádanou oblast. Jsem vděčná za tuto příležitost.</p>
+                    <div class="ikony">
+                        <a href="mailto:katerina.blatna(zav)email.cz" target="_top">
+                            <img class="email" src="icons/mail.png" alt="E-mail">
+                        </a>
+                        <a href="https://www.facebook.com/katerina.blatna.9" target="_blank">
+                            <img class="facebook" src="icons/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/in/katerinablatna/" target="_blank">
+                            <img class="linkedin" src="icons/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <div id="medailonek2">
+                    <div class="obal">
+                        <img class="alca" src="images/alca.jpg" alt="Alena Krejčířová">
+                        <img id="sipkaVlevo" onclick="displayKatka()" src="icons/sipkaVlevo.jpg" alt="šipka vlevo">
+                    </div>
+                    <h3>Alena Krejčířová</h3>
+                    <p class="popisOsoby">S velkým nadšením využívám data pro rozhodování, i když ne vždy to v oblasti
+                        HR je zcela jednoduché. Z Digitální Akademie mi učarovala oblast vizualizace dat, kterou se
+                        chystám dál probádat.</p>
+                    <div class="ikony">
+                        <a href="mailto:krejcirovaalena(zav)gmail.com" target="_top">
+                            <img class="email" src="icons/mail.png" alt="E-mail">
+                        </a>
+                        <a href="https://www.facebook.com/alenkakrejcirova" target="_blank">
+                            <img class="facebook" src="icons/facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/in/alenakrejcirova/" target="_blank">
+                            <img class="linkedin" src="icons/linkedin.png" alt="LinkedIn">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="paticka">
+                <a href="https://www.czechitas.cz" target="_blank"><img class="logo" src="images/logo.png" alt="Logo Czechitas"></a>
+
+                <p class="dekujem">Děkujeme našim mentorům Romanu Barošovi a Honzovi Richterovi i všem ostatním
+                    mentorům, koučům, zástupcům firem i celému týmu Czechitas a hlavně
+                    všem
+                    ostatním kolegyním z
+                    Digitální akademie.
+                    Všichni jsme dohromady tvořili skvělý tým!
+                </p>
+
+                <p class="copyright">© Copyright Kateřina Blatná 2018</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    </div>
+</body>
+
+</html>
